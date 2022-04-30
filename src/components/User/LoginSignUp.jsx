@@ -71,8 +71,9 @@ const LoginSignUp = ({ history }) => {
       alert.error(error);
       dispatch(clearErrors());
     }
-
-    if (isAuthenticated) {
+    console.log('test', isAuthenticated);
+    if (isAuthenticated === true) {
+      console.log('cek');
       history.push('/account');
     }
   }, [dispatch, error, alert, history, isAuthenticated]);
